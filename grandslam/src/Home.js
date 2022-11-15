@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
@@ -18,13 +18,13 @@ const Home = () => {
   }, []);
 
   const handleScroll = () => {
-    if(window.pageYOffset <= 1) {
+    if(window.pageYOffset <= 2) {
       document.getElementById("videoplay").currentTime = 0; //black
       setchColor("#FFFFFF");
       setButtonShow(false);
     }
     else {
-      window.scrollTo(0, 2);
+      window.scrollTo(0, 3);
       document.getElementById("videoplay").currentTime = 32; //color
       setchColor("#FCD789");
       setButtonShow(true);
@@ -44,10 +44,26 @@ const Home = () => {
             <DText>
                 <PText color={chColor}>GRANDSLAM</PText>
             </DText>
+            {!isButtonShow && <RImg src="/img/down_arrow_white.png"></RImg>}
             {isButtonShow && <RBtn onClick={handleClick}>GO TO CLUB</RBtn>}
         </WrapView>
     );
 };
+
+const motion = keyframes`
+	0% {margin-top: 0px;}
+	100% {margin-top: 10px;}
+`
+
+const RImg = styled.img`
+  width: 200px;
+  height:  200px;
+  top: 70%;
+  left: 45%;
+  position: absolute;
+  filter: drop-shadow(5px 5px 5px #000);
+  animation: ${motion} 0.8s linear 0s infinite alternate; margin-top: 0;
+`
 
 const PText = styled.p`
   font-family: 'Mr Dafoe', cursive;
