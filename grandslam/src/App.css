@@ -1,9 +1,8 @@
-
 .container {
-	flex-direction: column;
+  flex-direction: column;
 }
-@import url('https://fonts.googleapis.com/css2?family=Grenze:ital,wght@1,600&family=Montserrat:wght@100&family=Mr+Dafoe&family=Nanum+Myeongjo&family=Rubik+Glitch&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Grenze:ital,wght@1,600&family=Montserrat:wght@100&family=Mr+Dafoe&family=Nanum+Myeongjo&family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 .App {
   text-align: center;
 }
