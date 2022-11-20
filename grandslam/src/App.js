@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css';
+import "./App.css";
 import Home from "./Home";
-import ClubPage from './ClubPage';
+import MainPage from "./MainPage";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/home" element={<Home />}></Route>
-            <Route path="/clubpage" element={<ClubPage />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/clubpage" element={<MainPage />}></Route>
         </Routes>
       </Router>
     </>
-
   );
 }
 
+export default App;
