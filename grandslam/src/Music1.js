@@ -56,7 +56,7 @@ const Music1 = () => {
   return (
     <>
       <Wrap>
-        <LP isPlay={isPlay} image={"./img/KTLP.svg"}></LP>
+        <LP isPlay={isPlay} image={"./img/KTLP.svg"}  id="simple-list-item-1"></LP>
         <AudioWrap>
           <audio ref={myRef} src="./song/KTsong.mp3" />
           {isPlay ? (
