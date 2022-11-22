@@ -3,7 +3,6 @@ import Music1 from "./Music1";
 import Music2 from "./Music2";
 import Music3 from "./Music3";
 import LP from "./LP";
-import { Link } from "react-scroll"
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -88,15 +87,15 @@ const PText = styled.p`
   position: fixed;
   top: 0px;
   left: 10px;
-<<<<<<< HEAD
-  font-family: 'Mr Dafoe', cursive;
-  text-shadow: 5px 5px 3px #31748F;
-=======
 
   font-family: 'Mr Dafoe', cursive;
   text-shadow: 5px 5px 3px #31748F;
 
->>>>>>> af57a6103b79362d78c018f40cdb02ab7d8d90b7
+
+  font-family: 'Mr Dafoe', cursive;
+  text-shadow: 5px 5px 3px #31748F;
+
+
   text-align: center;
   width: 100%;
   font-size: 100px;
@@ -104,10 +103,7 @@ const PText = styled.p`
   opacity: ${props=> props.btnStatus || 0 };
   cursor: pointer;
   transition: opacity 0.3s ease-in;
-<<<<<<< HEAD
-=======
 
->>>>>>> af57a6103b79362d78c018f40cdb02ab7d8d90b7
 `
 
 const Btns = styled.button`

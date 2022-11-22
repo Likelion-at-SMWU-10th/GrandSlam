@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const Club = ({ isPlay, image }) => {
+const LP = ({ isPlay, image }) => {
   return (
     <>
       <FlipBox ontouchstart="this.classList.toggle('hover');">
@@ -117,4 +117,4 @@ const LpBack = styled.img`
   }
 `;
 
-export default Club;
+export default LP;
