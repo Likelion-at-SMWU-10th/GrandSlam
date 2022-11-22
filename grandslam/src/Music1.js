@@ -4,7 +4,7 @@ import LP from "./LP";
 import styled from "styled-components";
 // import Lyrics from "./Lyrics";
 
-const Music = () => {
+const Music1 = () => {
   const [isPlay, isSetPlay] = useState(true);
   const [text, setText] = useState("");
   const myRef = useRef();
@@ -112,4 +112,4 @@ const Lyrics = styled.div`
   color: whitesmoke;
 `;
 
-export default Music;
+export default Music1;

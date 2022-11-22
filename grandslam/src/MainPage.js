@@ -1,12 +1,16 @@
 import styled from "styled-components";
-import Music from "./Music";
+import Music1 from "./Music1";
+import Music2 from "./Music2";
+import Music3 from "./Music3";
 import LP from "./LP";
 
 function App() {
   return (
     <>
       <Wrap>
-        <Music></Music>
+        <Music1></Music1>
+        <Music2></Music2>
+        <Music3></Music3>
         <WrapDiv>
           <Move
             direction="down"
@@ -18,9 +22,8 @@ function App() {
             <img src="/img/marquee2.svg" width="60" height="10000"></img>
           </Move>
           <KT_back src="/img/KT_back.png" />
-          <LP isPlay={true} image={"./img/DusanLP.svg"}></LP>
+          
           <Doosan_back src="/img/Doosan_back.png" />
-          <LP isPlay={true} image={"./img/SamsungLP.svg"}></LP>
           <Samsung_back src="/img/Samsung_back.png" />
           <LP isPlay={true} image={"./img/LGLP.svg"}></LP>
           <LG_back src="/img/LG_back.png" />
