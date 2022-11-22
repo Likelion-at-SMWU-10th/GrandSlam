@@ -18,6 +18,16 @@ function App() {
     setBtnStatus(false); // BtnStatus의 값을 false로 바꿈 => 버튼 숨김
   }
 
+  
+  const handleToY = (sclY) => {  // 클릭하면 스크롤이 위로 올라가는 함수
+    window.scrollTo({
+      top: sclY,
+      behavior: "smooth"
+    });
+    setScrollY(sclY);
+    setBtnStatus(false); // BtnStatus의 값을 false로 바꿈 => 버튼 숨김
+  }
+
   const handleFollow = () => {
     setScrollY(window.pageYOffset);
     if(ScrollY > 100) {
@@ -46,6 +56,10 @@ function App() {
         <TopBtn btnStatus = {bts}// 버튼 노출 여부
           onClick={handleTop}  // 버튼 클릭시 함수 호출
           >TOP</TopBtn>
+        <Btns btnStatus={bts} onClick={() => handleToY(520)} rightPos = {"100px"} color={"#E60012"}>KT</Btns>
+        <Btns btnStatus={bts} onClick={() => handleToY(2580)} rightPos = {"160px"} color={"#D80114"}>두산</Btns>
+        <Btns btnStatus={bts} onClick={() => handleToY(5250)} rightPos = {"220px"} color={"#005BAC"}>삼성</Btns>
+        <Btns btnStatus={bts} onClick={() => handleToY(25090)} rightPos = {"280px"} color={"#F37321"}>한화</Btns>
         <WrapDiv>
           <Music1></Music1>
           <Music2></Music2>
@@ -87,14 +101,8 @@ const PText = styled.p`
   position: fixed;
   top: 0px;
   left: 10px;
-
   font-family: 'Mr Dafoe', cursive;
   text-shadow: 5px 5px 3px #31748F;
-
-
-  font-family: 'Mr Dafoe', cursive;
-  text-shadow: 5px 5px 3px #31748F;
-
 
   text-align: center;
   width: 100%;
@@ -103,33 +111,29 @@ const PText = styled.p`
   opacity: ${props=> props.btnStatus || 0 };
   cursor: pointer;
   transition: opacity 0.3s ease-in;
-
 `
 
 const Btns = styled.button`
   position : fixed;
   bottom: 40px; 
-  right: 100px;
+  right: ${props => props.rightPos || '100px'};
   
+  opacity: ${props=> props.btnStatus || 0 };
   z-index: 10; 
   width: 50px; 
   height: 50px;
-  opacity: ${props=> props.btnStatus || 0 }
   
-  z-index: 10; 
-  width: 50px; 
-  height: 50px;
   border-radius: 100%;
   border: 0 none;
   background: black;
-  color: red;
-  border: 2px solid red;
+  color: ${props => props.color || "#FFFFFF"};
+  border: 2px solid ${props => props.color || "#FFFFFF"};
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -0.06em;
   box-shadow: 1px 1px 6px 3px rgba(0,0,0,0.3);
   cursor: pointer;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.6s ease-in;
 `
 
 const TopBtn = styled.button`
