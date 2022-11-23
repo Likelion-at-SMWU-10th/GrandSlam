@@ -76,7 +76,7 @@
 ### 📺 시연
 
 
-** 초기화면 **
+**초기화면**
 
 ![fisrt_page](https://user-images.githubusercontent.com/87849933/203467988-04df45b0-c946-47a7-b321-83544c5574f6.gif)
 
